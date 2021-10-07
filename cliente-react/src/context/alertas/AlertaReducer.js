@@ -1,0 +1,24 @@
+/* eslint-disable no-multiple-empty-lines */
+
+import { OCULTAR_ALERTA, MOSTRAR_ALERTA } from '../../types';
+
+
+
+
+
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case MOSTRAR_ALERTA:
+      return {
+        alerta: action.payload,
+      };
+    case OCULTAR_ALERTA:
+      return {
+        alerta: null,
+      };
+    default:
+      return state;
+  }
+};
+export default reducer;
